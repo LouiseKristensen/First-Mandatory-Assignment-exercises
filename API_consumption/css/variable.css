@@ -1,0 +1,11 @@
+:root{
+    --colorHeaderAndFooter: #321223; 
+    --colorNav: #99021e; 
+    --colorActive: #f8f1b7; 
+    --colorCardHeader: #5f0b40; 
+
+    --colorFontOne: #fff9f0;  
+    --colorFontTwo: #56373f; 
+
+    --font: "Seravek", "Gill Sans Nova", "Ubuntu", "Calibri", "DejaVu Sans", "Source Sans Pro", sans-serif;
+}

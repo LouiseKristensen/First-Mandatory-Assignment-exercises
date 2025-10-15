@@ -1,0 +1,70 @@
+@import 'small_tablet_500.css'; 
+
+@media screen and (min-width: 700px){
+    body{
+        .bio{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 0.5rem;
+
+            .book-examples > article{
+                display: block;
+                margin: 1.5rem 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                header{
+                    background-color: transparent;
+                    color: var(--colorFont2);
+                    display: flex;
+                    flex-flow: column nowrap;
+                    text-align: center;
+                    margin: 0.5rem 0;
+                    padding: 0.5rem 0;
+                    line-height: 0.2rem;
+                }
+            }
+
+            article:nth-child(n+3) {
+                display: none;
+            }
+        }
+
+        .contact{
+            section{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                .article-and-form{
+                    display: grid;
+                    grid-template-columns: 1fr; 
+
+                }
+            
+                .contact-img {
+                    display: grid;
+                    grid-template-columns: 1fr; 
+                    margin: 1rem; 
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        footer{
+            > div:first-of-type {
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 0.5rem;
+                align-items: start;
+                text-align: left;
+            }
+        }
+    }
+}

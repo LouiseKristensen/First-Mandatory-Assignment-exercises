@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --colourBgMain: #f6edce;
+    --colourBgComplementary: white;
+    --colourBgNav: #e5d48f;
+    --colourQuoteBox: #d3d3d3; 
+    --colourHeadlines: #1336a2; 
+    --colourImportant: red; 
+    --colourBorder: black; 
+    --colourButtonFont: white; 
+
+    --fontMain: "Open Sans", sans-serif;
+}

@@ -1,0 +1,101 @@
+@import 'variable.css'; 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+
+    header{
+        background-color: var(--colorHeaderAndFooter);
+        color: var(--colorFontOne);
+        padding: 1rem 0.7rem;
+    }
+
+    nav {
+        background-color: var(--colorNav);
+
+        ul {
+            padding: 0.7rem;
+
+            li {
+                width: 100%;
+                padding: 0.3rem 1rem;
+                list-style: none;
+                
+                a {
+                    text-decoration: none;
+                    color: var(--colorFontOne);
+
+
+                    &.active {
+                        color: var(--colorActive); 
+                        text-decoration: underline;
+                    }
+                } 
+            }
+        }
+    }
+
+    #movieList{
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .card{
+            border: 1px solid var(--colorCardHeader);
+            border-radius: 0.5rem;
+
+            section{
+                padding: 0.5rem;
+
+                .imgContainer{
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 0.5rem;
+                }
+
+                .cardInfo{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    padding-top: 0.5rem;
+                }
+
+                .font{
+                    font-weight: bold;
+                }
+            }
+
+        }
+    }
+
+    footer{
+        background-color: var(--colorHeaderAndFooter);
+        color: var(--colorFontOne);
+        text-align: center;
+    }
+
+    .hidden {
+    display: none;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    section{
+        display: flex; 
+        flex-direction: row; 
+
+        .imgContainer{
+            margin-right: 0.5rem;
+
+        }
+
+    }
+    
+}

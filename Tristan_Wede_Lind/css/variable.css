@@ -1,0 +1,12 @@
+:root{
+    --colorPrimary: #247BA0;  
+    --colorSecondary: #C3B299; 
+    --colorThird: #CBD4C2; 
+    --colorComplementary: #FFFCFF; 
+    --colorFont: #50514F; 
+    --colorFont2: black; 
+
+    --font: Arial, Helvetica, sans-serif; 
+
+    --img: clamp(150px, calc(180px - (30 * ((100vw - 320px) / (1024 - 320)))), 180px);
+}

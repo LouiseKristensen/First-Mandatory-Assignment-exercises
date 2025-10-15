@@ -1,0 +1,94 @@
+@import 'big_tablet_700.css'; 
+
+@media screen and (min-width: 1024px) {
+    body{
+        .bio{
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 0.5rem;
+
+            .book-examples{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin: 0;
+
+                article{
+                    display: block;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+
+                    header{
+                        background-color: transparent;
+                        color: var(--colorFont2);
+                        margin: 1rem 0;
+                        padding: 0;
+                        line-height: 0.2rem;
+                    }
+
+                } 
+            }
+
+        }
+        .tour{
+            picture{
+
+                source{
+                    height: 150px;
+                }
+            }
+
+            section{
+                display: grid;
+                grid-template-columns: 2fr 2fr;
+                gap: 1rem;
+                margin: 1rem 0;
+
+                article{
+                    border: 1px solid var(--colorSecondary);
+                    border-radius: 0.5rem;
+                    padding: 0.5rem;
+                }
+            }
+        }
+
+        .books {
+            .books-list{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr)!important;
+                gap: 1rem;
+                margin: 1rem!important;
+                /* gap: 1rem; */
+                
+                article {
+                    border: 1px solid var(--colorSecondary); 
+                    border-radius: 0.5rem;
+                    padding: 1rem!important;
+                    
+                    &:last-child{
+                        border-bottom: block;
+                    }
+                }
+                
+            } 
+        }
+
+
+        .contact{
+            .article-and-form {
+
+                > article:first-of-type, 
+                > div {
+                    border: 1px solid var(--colorSecondary);
+                    border-radius: 0.5rem;
+                    padding: 1rem;
+                }
+
+                > div{
+                    margin: 0 1rem;
+                }
+            }
+    }
+}
+}

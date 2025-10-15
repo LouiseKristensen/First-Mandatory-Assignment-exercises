@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <header>
+        <h1>Restaurant EK </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" title="homepage">Home</a></li>
+            <li><a href="menu.html" title="menu">Menu</a></li>
+            <li><a href="contact.html" title="contact" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <div class="contactMap">
+                <img src="img/map.jpg" alt="contact map">
+            </div>
+
+            <section class="informationField">
+            <div>
+                <address>
+                        <p>Gulbergsgade 29N</p>
+                        <p>2200 Copenhagen</p>
+                        <p>Phone no.:<a href="tel:(+45) 20 82 53 70" title="Call us on the phone">20 82 53 70</a></p>
+                        <p>E-mail: <a href="mailto:info@restaurantek.dk" title="Send us a message">info@restaurantek.dk</a></p>
+                </address>
+            </div>
+            </section>
+        </section>
+        <section>
+            <fieldset title="Contact form">
+                <legend>Contact form</legend>
+                <form>
+                    <div class="stylingDesktop">
+                        <label for="txtFullName">Full name</label>
+                        <input type="text" id="txtFullName" required>  
+                    </div>
+                    <div class="stylingDesktop">
+                        <label for="txtPhoneNumber">Phone No</label>
+                        <input type="tel" id="txtPhoneNumber" pattern="\d{8}" required>  
+                    </div>
+                    <div class="stylingDesktop">
+                        <label for="txtEmail">E-mail</label>
+                        <input type="email" id="txtEmail" required>  
+                    </div>
+                    <div class="stylingDesktop">
+                        <label for="txtPersons">Persons</label>
+                        <input type="number" id="txtPersons" value="2" required min="1" max="20">
+                    </div>                    
+                    <div class="stylingDesktop">
+                        <label for="txtDateTime">Date and time</label>
+                        <input type="datetime-local" id="txtDateTime" required>
+                    </div>                       
+                    <div>
+                        <label for="txtComment">Further information</label>
+                        <textarea id="txtComment" required></textarea>  
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
+            </fieldset>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2021-2025 EK Development</p>
+    </footer>
+</body>
+</html>
