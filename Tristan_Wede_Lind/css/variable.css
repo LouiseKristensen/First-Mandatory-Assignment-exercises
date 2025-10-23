@@ -7,6 +7,4 @@
     --colorFont2: black; 
 
     --font: Arial, Helvetica, sans-serif; 
-
-    --img: clamp(150px, calc(180px - (30 * ((100vw - 320px) / (1024 - 320)))), 180px);
 }

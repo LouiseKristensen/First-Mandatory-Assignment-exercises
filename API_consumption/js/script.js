@@ -3,9 +3,6 @@ import { API_CONFIG } from "./api_config.js";
 const target = document.body.dataset.target;
 
 async function fetchMovies(target){
-  // console.log("Type modtaget i fetchMovies:", type);
-  // console.log("Endpoints:", API_CONFIG.endpoints);
-  
 
   const url = `${API_CONFIG.baseUrl}${API_CONFIG.endpoints[target]}`;
 
@@ -19,7 +16,6 @@ async function fetchMovies(target){
 
   try{
     const response = await fetch(url, options);
-    // console.log(response)
     const data = await response.json();
     const results = data.results;
 
@@ -60,20 +56,6 @@ async function fetchMovies(target){
 }
 
 fetchMovies(target);
-
-
-// const firstLink = document.querySelector("nav a");
-// const initialTarget = firstLink.dataset.target;
-// fetchMovies(initialTarget);
-
-// document.querySelectorAll("nav a").forEach(link => {
-//   link.addEventListener("click", e => {
-//     e.preventDefault();           // forhindrer reload / navigation
-//     const target = link.dataset.target;
-//     document.body.dataset.target = target;
-//     fetchMovies(target);
-//   });
-// });
 
 
 

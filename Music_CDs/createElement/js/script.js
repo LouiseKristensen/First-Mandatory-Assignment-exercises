@@ -10,8 +10,11 @@ document.getElementById("AddedMusic").addEventListener('submit', (e) => {
     const author = enteredAuthor.value;
     const title = enteredTitle.value;
     const year = parseFloat(enteredYear.value);
+    const id = Date.now()
+    const musicItem = {id, author, title, year}; 
 
     const row = document.createElement("tr"); 
+    row.dataset.id = id;
 
     const data1 = document.createElement("td"); 
     data1.innerText = author; 
@@ -25,25 +28,33 @@ document.getElementById("AddedMusic").addEventListener('submit', (e) => {
     const removebtn = document.createElement("button"); 
     removebtn.innerText = "x"; 
     removebtn.addEventListener('click', function(){
-        this.closest("tr").remove();
+        const row = this.closest("tr"); 
+        const idToRemove = parseInt(row.dataset.id);
+        row.remove()
+
+        // local storage remove tr 
+        let MusicList = JSON.parse(localStorage.getItem("MusicList")) || [];
+        MusicList = MusicList.filter(item => item.id !== idToRemove);
+        localStorage.setItem("MusicList", JSON.stringify(MusicList));
     });
 
     row.append(data1, data2, data3, removebtn); 
 
     document.querySelector("#MusicList").append(row);
 
+    // session storage
+    // let MusicList = JSON.parse(sessionStorage.getItem("MusicList")) || [];
+    // MusicList.push(musicItem);
+    // sessionStorage.setItem("MusicList", JSON.stringify(MusicList));
+
+
+    // Local storage 
+    let MusicList = JSON.parse(localStorage.getItem("MusicList")) || []; 
+    MusicList.push(musicItem); 
+    localStorage.setItem("MusicList", JSON.stringify(MusicList)) 
+
     enteredAuthor.value = "";
     enteredTitle.value = "";
     enteredYear.value = "";
-
-
-    // session storage 
-    let MusicList = JSON.parse(sessionStorage.getItem("row")) || []; 
-    MusicList.push({author, title, year});
-    sessionStorage.setItem("row", JSON.stringify(MusicList)); 
-    sessionStorage.removeItem(removebtn)
-
+ 
 }); 
-
-
-
