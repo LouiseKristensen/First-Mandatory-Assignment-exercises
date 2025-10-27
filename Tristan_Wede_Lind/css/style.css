@@ -187,9 +187,10 @@ body{
             }
 
             .arrow{
-                justify-self: end; /* flytter pilen helt ud til højre */
+                justify-self: end;
                 margin: 1rem;
                 cursor: pointer;
+                border: none;
 
                 &:hover{
                     background-color: rgba(0, 0, 0, 0.2);
@@ -252,9 +253,10 @@ body{
             }
             
             .arrow{
-                justify-self: end; /* flytter pilen helt ud til højre */
+                justify-self: end;
                 margin: 1rem;
                 cursor: pointer;
+                border: none;
 
                 &:hover{
                     background-color: rgba(0, 0, 0, 0.2);
@@ -332,9 +334,10 @@ body{
             }
 
             .arrow{
-                justify-self: end; /* flytter pilen helt ud til højre */
+                justify-self: end;
                 margin: 1rem;
                 cursor: pointer;
+                border: none;
 
                 &:hover{
                     background-color: rgba(0, 0, 0, 0.2);
@@ -345,6 +348,10 @@ body{
                     height: auto;
                 }
             }
+        }
+
+        .hidden {
+            display: none;
         }
     
     }

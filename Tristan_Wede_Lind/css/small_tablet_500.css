@@ -1,93 +1,193 @@
-@import 'big_tablet_700.css'; 
+@import 'style.css'; 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 500px) {
+
     body{
-        .bio{
+        header{
             display: grid;
-            grid-template-columns: 3fr 2fr;
-            gap: 0.5rem;
+            grid-template-columns: 1fr 3fr 1fr;
+            text-align: left;
+            align-items: center;
 
-            .book-examples{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                margin: 0;
-
-                article{
-                    display: block;
-                    display: flex;
-                    flex-flow: column nowrap;
-                    justify-content: center;
-                    align-items: center;
-
-                    header{
-                        background-color: transparent;
-                        color: var(--colorFont2);
-                        margin: 1rem 0;
-                        padding: 0;
-                        line-height: 0.2rem;
-                    }
-
-                } 
-            }
-
-        }
-        .tour{
-            picture{
-
-                source{
-                    height: 150px;
+            .lind-avatar{
+                display: block;
+                
+                img{
+                    border-radius: 50%;
+                    height: auto;
+                    width: clamp(40px, 20vw, 100px);
+                    object-fit: cover;
                 }
             }
 
-            section{
-                display: grid;
-                grid-template-columns: 2fr 2fr;
-                gap: 1rem;
-                margin: 1rem 0;
+            form{
+                display: flex;
+                justify-content: end;
+            }
+        }
 
-                article{
-                    border: 1px solid var(--colorSecondary);
-                    border-radius: 0.5rem;
-                    padding: 0.5rem;
+        nav{
+            ul{
+                display: grid;
+                grid-template-columns: repeat(4, auto);
+                justify-content: space-evenly; 
+                align-items: center;
+
+                li{
+                    border-bottom: none;
+                }
+
+
+            }
+
+        }
+
+        .hero-book-introduction{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            align-items: center;
+            gap: 2rem; 
+            padding: 1rem;
+
+            div{
+                display: grid;
+                align-content: center;
+                justify-items: center; 
+            }
+
+            .new-book{
+                margin-top: 0; 
+
+                img{
+                    width: 50%;
+                    height: auto;
                 }
             }
         }
 
-        .books {
+        .books{
             .books-list{
                 display: grid;
-                grid-template-columns: repeat(2, 1fr)!important;
-                gap: 1rem;
-                margin: 1rem!important;
-                
+                grid-template-columns: 1fr;
+
                 article {
-                    border: 1px solid var(--colorSecondary); 
-                    border-radius: 0.5rem;
-                    padding: 1rem!important;
-                    
-                    &:last-child{
-                        border-bottom: block;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    align-items: start;
+
+                    div:first-child {
+                        grid-column: 2;
+                        grid-row: 1;
+
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
                     }
-                }
-                
-            } 
-        }
 
+                    div:last-child {
+                        display: grid;
+                        grid-column: 1;
+                        grid-row: 1;
+                    
+                        gap: 0.5rem;
+                    }
 
-        .contact{
-            .article-and-form {
-
-                > article:first-of-type, 
-                > div {
-                    border: 1px solid var(--colorSecondary);
-                    border-radius: 0.5rem;
-                    padding: 1rem;
-                }
-
-                > div{
-                    margin: 0 1rem;
+                    
                 }
             }
+            
+
+        }
+
+        .contact{
+            article{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+
+                div:first-child {
+                    grid-column: 1;
+                     
+                    gap: 1rem;
+                    text-align: center;
+                }
+
+                div:last-child {
+                    grid-column: 2;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                        margin: 0;
+                    }
+                }
+            }  
+
+            form{
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+        footer{
+
+            > div:first-of-type {
+                grid-template-columns: /* repeat(3, 1fr);*/ 1fr 1fr 1.5fr; 
+                column-gap: 0.5rem;
+                align-items: start;
+                text-align: left;
+            }
+
+            .contact-social,
+            .policy,
+            .created-by {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                .keapublishing {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                }
+
+                .social-media-icons {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+
+                    /* img {
+                        width: clamp(20px, 3vw, 32px);
+                        height: auto;
+                        border-radius: 50%;
+                    }   */
+                }
+            }
+
+            .policy{
+                text-align: center;
+            }
+
+            .created-by{
+                text-align: right;
+            }
+
+            .copyright {
+                grid-column: 1 / -1;
+                justify-self: center;
+                margin-top: 1rem;
+                text-align: center;
+            }
+        }
     }
 }
-}
+
+
+
+
+
+
