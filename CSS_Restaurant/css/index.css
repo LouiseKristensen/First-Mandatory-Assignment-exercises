@@ -86,7 +86,7 @@ body {
         }
       }
 
-      article {
+      .quote {
         background-color: var(--colourQuoteBox);
         border-radius: 0.5rem;
         padding: 1rem;

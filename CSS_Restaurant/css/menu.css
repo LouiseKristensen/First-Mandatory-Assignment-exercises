@@ -1,22 +1,31 @@
-@import 'stylesIndex.css'; 
+@import 'index.css'; 
 
 article{
-    background-color: var(--colourBgMain) !important;;
-
-    h2{
-    text-align: center;
-    color: var(--colourHeadlines) !important;;
+    background-color: var(--colourBgMain) !important;
     margin-bottom: 1rem;
+    border-radius: 0.3rem;
+
+    .menuElement{
+        padding: 1rem;
+
+        h2{
+            text-align: center;
+            color: var(--colourHeadlines) !important;;
+            margin-bottom: 1rem;
+            }
+
+            .price{
+                border: 5px solid var(--colourBgNav);
+                background-color: var(--colourImportant);
+                color: var(--colourButtonFont);
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                margin-top: 0.5rem;
+                width: 25%;
+            }
     }
 
-    button{
-        border: 5px solid var(--colourBgNav);
-        background-color: var(--colourImportant);
-        color: var(--colourButtonForm);
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-        margin-top: 0.5rem;
-    }
+    
 }
 
 
@@ -61,6 +70,25 @@ article{
 
         article {
             flex: 1 1 48%;
+
+            .menuElement{
+                flex: 1 1 50%;
+
+                .price{
+                    width: 45%;
+                }
+            }
+
+            .image{
+
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                }
+
+            }
+            
+            
         }
     }
 }
