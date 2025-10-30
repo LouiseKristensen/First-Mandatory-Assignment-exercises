@@ -9,5 +9,4 @@
 
     --font: "Seravek", "Gill Sans Nova", "Ubuntu", "Calibri", "DejaVu Sans", "Source Sans Pro", sans-serif;
     --fontSize: clamp(1rem, 2vw, 1.5rem); 
-    --fontSizeNav: clamp(1rem, 2vw, 1.5rem)
 }
