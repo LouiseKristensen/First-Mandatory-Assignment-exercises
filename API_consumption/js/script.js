@@ -1,10 +1,8 @@
 import { API_CONFIG } from "./api_config.js"; 
 
-const target = document.body.dataset.target;
+export async function fetchMovies(id){
 
-async function fetchMovies(target){
-
-  const url = `${API_CONFIG.baseUrl}${API_CONFIG.endpoints[target]}`;
+  const url = `${API_CONFIG.baseUrl}${API_CONFIG.endpoints[id]}`;
 
   const options = {
     method: "GET",
@@ -15,6 +13,9 @@ async function fetchMovies(target){
   };
 
   try{
+    document.querySelector("#wait").classList.remove("hidden");
+    document.querySelector("#movieList").innerHTML = "";
+
     const response = await fetch(url, options);
     const data = await response.json();
     const results = data.results;
@@ -26,26 +27,16 @@ async function fetchMovies(target){
 
         moviecard.querySelector("h2").textContent = movie.title 
 
-        const poster = moviecard.querySelector('img');
-          const posterBase = "https://image.tmdb.org/t/p/w154";
-          poster.setAttribute("src", posterBase + movie.poster_path);
-          poster.setAttribute("alt", movie.title);
-
+        const poster = moviecard.querySelector("img");
+        poster.setAttribute("src", `${API_CONFIG.posterBase}${movie.poster_path}`);
+        poster.setAttribute("alt", movie.title);
       
         moviecard.querySelector(".description").textContent = movie.overview;
-
-        const orgtitle = moviecard.querySelector(".orgtitle"); 
-          orgtitle.textContent = movie.original_title
-          orgtitle.textContent = "Original title: " + movie.original_title
-          orgtitle.classList.add("font")
-
-        const releasedate  = moviecard.querySelector(".releasedate"); 
-          releasedate.textContent = movie.release_date
-          releasedate.textContent = "Release date: " + movie.release_date
-          releasedate.classList.add("font")
+        moviecard.querySelector(".orgtitle").textContent = movie.original_title;
+        moviecard.querySelector(".releasedate").textContent = movie.release_date;
 
       movieList.append(moviecard);
-    })
+    }); 
 
     document.querySelector("#wait").classList.add("hidden");
     document.querySelector("#movieList").append(movieList);
@@ -53,9 +44,4 @@ async function fetchMovies(target){
   } catch (error) {
       console.error("Error fetching movies:", error);
     }
-}
-
-fetchMovies(target);
-
-
-
+}; 

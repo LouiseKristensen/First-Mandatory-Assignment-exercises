@@ -1,18 +1,15 @@
 'use strict'; 
 
-const enteredAuthor = document.querySelector("#author"); 
-const enteredTitle = document.querySelector("#title"); 
-const enteredYear = document.querySelector("#year"); 
 
-const template = document.querySelector("#MusicList"); 
 
 document.getElementById("AddedMusic").addEventListener('submit', (e) => {
     e.preventDefault();
     
-    const author = enteredAuthor.value;
-    const title = enteredTitle.value;
-    const year = parseFloat(enteredYear.value);
-    
+    const author = e.target.author.value;
+    const title = e.target.title.value;
+    const year = parseFloat(e.target.year.value);
+
+    const template = document.querySelector("#MusicList"); 
     const rows = template.content.cloneNode(true);
     
     rows.querySelector(".author").textContent = author; 
@@ -27,7 +24,5 @@ document.getElementById("AddedMusic").addEventListener('submit', (e) => {
     const table = document.querySelector("table"); 
     table.append(rows);
 
-    enteredAuthor.value = "";
-    enteredTitle.value = "";
-    enteredYear.value = "";
+    e.target.reset(); 
 });

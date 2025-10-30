@@ -1,15 +1,11 @@
 'use strict';
 
-const enteredAuthor = document.querySelector("#author"); 
-const enteredTitle = document.querySelector("#title"); 
-const enteredYear = document.querySelector("#year"); 
-
 document.getElementById("AddedMusic").addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const author = enteredAuthor.value;
-    const title = enteredTitle.value;
-    const year = parseFloat(enteredYear.value);
+    const author = e.target.author.value;
+    const title = e.target.title.value;
+    const year = parseFloat(e.target.year.value);
     const id = Date.now()
     const musicItem = {id, author, title, year}; 
 
@@ -52,9 +48,7 @@ document.getElementById("AddedMusic").addEventListener('submit', (e) => {
     let MusicList = JSON.parse(localStorage.getItem("MusicList")) || []; 
     MusicList.push(musicItem); 
     localStorage.setItem("MusicList", JSON.stringify(MusicList)) 
-
-    enteredAuthor.value = "";
-    enteredTitle.value = "";
-    enteredYear.value = "";
+    
+    e.target.reset();
  
 }); 

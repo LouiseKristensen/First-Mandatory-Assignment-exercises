@@ -7,7 +7,7 @@
 }
 
 body{
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: var(--fontSize);
 
     header{
         background-color: var(--colorHeaderAndFooter);
@@ -26,9 +26,12 @@ body{
                 padding: 0.3rem 1rem;
                 list-style: none;
                 
-                a {
+                button {
                     text-decoration: none;
                     color: var(--colorFontOne);
+                    border: none;
+                    background-color: var(--colorNav);
+                    font-size: var(--fontSizeNav);
 
 
                     &.active {
@@ -64,6 +67,16 @@ body{
                     flex-direction: column;
                     gap: 0.5rem;
                     padding-top: 0.5rem;
+
+                    .orgtitle::before {
+                        content: 'Release date: ';
+                        font-weight: bold;
+
+                    }
+                    .releasedate::before {
+                        content: 'Original title: ';
+                        font-weight: bold;
+                    }
                 }
 
                 .font{
@@ -81,12 +94,20 @@ body{
     }
 
     .hidden {
-    display: none;
+        display: none;
     }
 
 }
 
 @media screen and (min-width: 600px) {
+
+    nav{
+        > ul{
+            display: flex;
+            flex-flow: row nowrap;
+        }
+    }
+    
     section{
         display: flex; 
         flex-direction: row; 

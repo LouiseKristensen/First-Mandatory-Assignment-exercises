@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popular</title>
+    <title>Now Playing</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" type="module"></script>
+    <script src="js/navigation.js" type="module"></script>
 </head>
-<body data-target="popular">
+<body>
     <header>
         <h1>The Movie Database</h1>
     </header>
     <nav>
         <ul>
-            <li><a href="nowPlaying.html" title="Now Playing">Now Playing</a></li>
-            <li><a href="popular.html" title="Popular" class="active">Popular</a></li>
-            <li><a href="topRated.html" title="Top Rated">Top Rated</a></li>
-            <li><a href="upcoming.html" title="Upcoming">Upcoming</a></li>
+            <li><button id="nowPlaying" class="active">Now Playing</button></li>
+            <li><button id="popular">Popular</button></li>
+            <li><button id="topRated">Top Rated</button></li>
+            <li><button id="upcoming">Upcoming</button></li>
         </ul>
     </nav>
 
     <main>
         <section id="wait">
-            <p>Finding the movies playing now</p>
+            <p>Finding the movies</p>
         </section>
         <section id="movieList"></section>
 
@@ -45,7 +46,6 @@
                 </section>
             </article>
         </template>
-
     </main>
     <footer>
         <p>&copy; Web development 2025</p>
