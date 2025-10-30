@@ -134,7 +134,7 @@
 
         footer{
 
-            > div:first-of-type {
+            > section:first-of-type {
                 grid-template-columns: /* repeat(3, 1fr);*/ 1fr 1fr 1.5fr; 
                 column-gap: 0.5rem;
                 align-items: start;

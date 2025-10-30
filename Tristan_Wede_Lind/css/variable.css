@@ -1,4 +1,5 @@
 :root{
+    /* color */
     --colorPrimary: #247BA0;  
     --colorSecondary: #C3B299; 
     --colorThird: #CBD4C2; 
@@ -6,5 +7,15 @@
     --colorFont: #50514F; 
     --colorFont2: black; 
 
+    /* fonts */
     --font: Arial, Helvetica, sans-serif; 
+    --fontSize: clamp(0.9rem, 1.2vw, 1.1rem); 
+    --pageTitleSize: clamp(1.2rem, 2.5vw, 2rem);  
+    --contactTitleSize: clamp(1rem, 2.5vw, 1.3rem); 
+
+    /* img */
+    --newBookImg: clamp(150px, calc(180px - (30 * ((100vw - 320px) / (1024 - 320)))), 180px);
+    --microphoneImg: clamp(200px, 30vw, 600px); 
+    --booklistImg: clamp(150px, calc(180px - (30 * ((100vw - 320px) / (1024 - 320)))), 180px);
+    --contactImg: clamp(40px, 20vw, 100px); 
 }
