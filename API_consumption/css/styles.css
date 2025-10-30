@@ -31,7 +31,7 @@ body{
                     color: var(--colorFontOne);
                     border: none;
                     background-color: var(--colorNav);
-                    font-size: var(--fontSizeNav);
+                    font-size: var(--fontSize);
 
 
                     &.active {
