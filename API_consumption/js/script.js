@@ -45,3 +45,5 @@ export async function fetchMovies(id){
       console.error("Error fetching movies:", error);
     }
 }; 
+
+fetchMovies("nowPlaying"); 
