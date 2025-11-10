@@ -7,7 +7,7 @@
             grid-template-columns: 3fr 1fr;
             gap: 0.5rem;
 
-            .book-examples > aside{
+            .book-examples > article{
                 display: block;
                 margin: 1.5rem 0;
                 display: flex;
@@ -27,7 +27,7 @@
                 }
             }
 
-            aside:nth-child(n+3) {
+            article:nth-child(n+3) {
                 display: none;
             }
         }
